@@ -1,42 +1,86 @@
+body{
+    height: 100vh;
+    margin: 0;
+}
+
 .container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 0.5fr;
     grid-template-rows: 1fr 1fr 5fr 1fr 3fr;
     grid-template-areas: 
-        "header header header header"
-        "textC textC"
-        "carrousel carrousel carrousel level"
-        "textL textL"
-        "course course course course"
-    ;
+        "header header header header header header"
+        ". textC textC textC textC ." /* con un . indicamos que no ira nada en esa celda */
+        ". carrousel carrousel carrousel level ."
+        ". textL textL textL textL ."
+        ". course1 course2 course3 course4 .";
+    height: 100vh;
+    grid-gap: 10px;
 }
 
 .header{
+    display: grid;
     grid-area: header;
     background-color: aqua;
 }
 
-.nextChallenge .text{
-    grid-area: textC;
+.textC{
+    display: grid;
+    grid-area: textC; 
     background-color: blue;
 }
 
 .carrousel{
+    display: grid;
     grid-area: carrousel;
     background-color: blueviolet;
 }
 
 .level{
+    display: grid;
     grid-area: level;
-    background-color: cornflowerblue
+    background-color: cornflowerblue;
 }
 
-.newLaunches .text{
-    grid-area: textL;
+.textL{
+    display: grid;
+    grid-area: textL; 
     background-color: chartreuse;
 }
 
-.course{
-    grid-area: course;
+.course1{
+    display: grid;
+    grid-area: course1;
     background-color: chocolate;
+}
+.course2{
+    display: grid;
+    grid-area: course2;
+    background-color: chocolate;
+}
+.course3{
+    display: grid;
+    grid-area: course3;
+    background-color: chocolate;
+}
+.course4{
+    display: grid;
+    grid-area: course4;
+    background-color: chocolate;
+}
+
+/* @media solo reorganiza grid */
+@media screen and (max-width:600px){
+    .container{
+        grid-template-rows: 1.5fr 1fr 4fr 3fr 1fr 3fr 3fr 3fr 3fr;
+        grid-template-areas: 
+            "header header header header header header"
+            ". textC textC textC textC  ." 
+            ". carrousel carrousel carrousel carrousel ."
+            ". level level level level ."
+            ". textL textL textL textL ."
+            ". course1 course1 course1 course1 ."
+            ". course2 course2 course2 course2 ."
+            ". course3 course3 course3 course3 ."
+            ". course4 course4 course4 course4 .";
+    }
 }

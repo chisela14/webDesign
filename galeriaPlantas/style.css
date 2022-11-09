@@ -1,0 +1,49 @@
+body {
+    height: 100vh;
+    margin: 0;
+}
+
+.header{
+    max-width: 100%;
+    background-color: green;
+}
+
+.gallery{
+    margin: auto;
+    max-width: 80%;
+    display: grid;
+    grid-template-columns: repeat( auto-fill, minmax(250px, 1fr) );
+}
+
+.gallery-item{
+    width: 100%;
+    height: 100%;
+    background-color: lightgreen;
+}
+
+.gallery-item .image {
+    width: 80%;
+    height: 80%;
+}
+
+.image img{
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-item .text {
+    width: 100%;
+    height: 20%;
+}
+
+@media (max-width: 600px){
+    .gallery {
+        color: red;
+    }
+}
+
+@media (max-width: 200px){
+    .gallery {
+        color: purple;
+    }
+}

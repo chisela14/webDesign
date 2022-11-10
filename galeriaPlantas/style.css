@@ -5,23 +5,26 @@ body {
 
 .header{
     max-width: 100%;
+    height: 10%;
     background-color: green;
+    margin-bottom: 10px;
 }
 
-.gallery{
+.grid-container{
     margin: auto;
     max-width: 80%;
     display: grid;
-    grid-template-columns: repeat( auto-fill, minmax(250px, 1fr) );
+    grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
+    grid-auto-rows: 200px;
 }
 
-.gallery-item{
+.grid-item{
     width: 100%;
     height: 100%;
     background-color: lightgreen;
 }
 
-.gallery-item .image {
+.grid-item .image {
     width: 80%;
     height: 80%;
 }
@@ -31,19 +34,19 @@ body {
     height: 100%;
 }
 
-.gallery-item .text {
+.grid-item .text {
     width: 100%;
     height: 20%;
 }
 
 @media (max-width: 600px){
-    .gallery {
+    .grid-container {
         color: red;
     }
 }
 
 @media (max-width: 200px){
-    .gallery {
+    .grid-container {
         color: purple;
     }
 }

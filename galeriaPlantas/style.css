@@ -16,25 +16,36 @@ body {
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
     grid-auto-rows: 200px;
+    gap: 10px;
 }
 
 .grid-item{
-    width: 100%;
-    height: 100%;
     background-color: lightgreen;
 }
 
 .grid-item .image {
-    width: 80%;
+    width: 100%;
     height: 80%;
 }
 
-.image img{
+.grid-item .image img{
     width: 100%;
     height: 100%;
+    object-fit: contain;
+    transition: 0.5s ease-in-out;
+}
+.grid-item:hover .image img{
+    transform:scale(1.2);
 }
 
-.grid-item .text {
+.span_c{
+    grid-column: span 2;
+}
+.span_r{
+    grid-row: span 2;
+}
+
+.grid-item .info {
     width: 100%;
     height: 20%;
 }

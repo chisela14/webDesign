@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Form - Chisela Colás</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <section class="contact">
+        <div class="contact-details">
+            <h2 class="contact-details-title">Información de contacto</h2>
+            <div class="contact-details-group">
+                <p class="contact-text">
+                  Si desea contactar con nosotros puede hacerlo 
+                  por los siguientes canales o rellenar el formulario adjunto,
+                  de cualquier manera le atenderemos con mucho gusto.
+                </p>
+              </div>
+            <div class="contact-details-group">
+                <p class="contact-label">Dirección</p>
+                <p class="contact-text">C. Diamantino García, 40, 41310 Brenes, Sevilla</p>
+            </div>
+            <div class="contact-details-group">
+                <p class="contact-label">Correo electrónico</p>
+                <p class="contact-text">iesjacaranda@iesjacaranda.es</p>
+            </div>
+            <div class="contact-details-group">
+                <p class="contact-label">Teléfono</p>
+                <p class="contact-text">955622585</p>
+            </div>
+        </div>
+        <div class="contact-form">
+            <h2 class="contact-form-title">Escríbenos</h2>
+            <div class="contact-form-group">
+                <label for="name">Nombre</label>
+                <input type="text" name="name" placeholder="Jose Manuel" required/>
+            </div>
+            <div class="contact-form-group">
+                <label for="last_name">Apellidos</label>
+                <input type="text" name="last_name" placeholder="García López" required/>
+            </div>
+            <div class="contact-form-group">
+                <label for="email">Correo electrónico</label>
+                <input type="text" name="email" placeholder="jmgarlo@gmail.com" required/>
+            </div>
+            <div class="contact-form-group">
+                <label for="phone">Teléfono</label>
+                <input type="text" name="phone" placeholder="678123456" required/>
+            </div>
+            <div class="contact-form-group">
+                <label for="message">Mensaje</label>
+                <textarea name="message" placeholder="Escribe tu mensaje"  rows="5" required></textarea>
+            </div>
+            <button type="submit" class="contact-form-submit">Enviar</button>
+        </div>
+    </section>
+</body>
+</html>
